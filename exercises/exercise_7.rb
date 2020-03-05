@@ -7,6 +7,10 @@ require_relative './exercise_5'
 require_relative './exercise_6'
 
 puts "Exercise 7"
-puts "----------"
+puts "Give a store name:"
+puts @answer = gets.chomp
 
-# Your code goes here ...
+# creates a new store that has missing inputs
+@useless = Store.create(name: @answer)
+
+p @useless.errors.messages
